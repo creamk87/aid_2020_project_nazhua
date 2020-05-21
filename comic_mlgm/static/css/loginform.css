@@ -1,0 +1,123 @@
+
+        .overCurtain {
+        border-top:1px solid rgb(230,245,255);
+        position:absolute;
+        height:674px;
+        width:100%;
+        left:0;
+        top:0;
+        opacity:0.7;
+        display:none;
+        background-color:rgb(230,245,255);
+        }
+        .hide-center {
+            width:500px;
+            height:600px;
+            position:absolute;
+            right:0;
+            left:0;
+            bottom:0;
+            top:0;
+            margin:auto;
+            display:none;
+            z-index:1;
+        }
+        .hide-center #formhead {
+            width:300px;
+            height:42px;
+            margin:0;
+            padding-top:12px;
+            padding-bottom:-30px;
+            border-top-left-radius:10px;
+            border-top-right-radius:10px;
+            background-color: red;
+        }
+        .hide-center #formhead-title {
+            width:100px;
+            height:42px;
+            margin-left:120px;
+            margin-right:36px;
+            color: #ffffff;
+            font-weight:900;
+            font-size: large;
+            display:inline-block;
+        }
+        .hide-center #close {
+            width:35px;
+            height:24px;
+            margin-bottom: 0;
+            border:0;
+            border-radius:20%;
+            background-color:red;
+            color:white;
+            display:inline-block;
+        }
+        .hide-center #formbody {
+            width:300px;
+            height:245px;
+            background-color:#efefef;
+            border-bottom-left-radius:10px;
+            border-bottom-right-radius:10px;
+        }
+        .hide-center .loginHead {
+            margin-right:-8px;
+            padding:13px;
+            width:25px;
+            height:28px;
+            background-color: #efefef;
+            vertical-align:middle;
+        }
+        .hide-center .loginInput {
+            height:45px;
+            width:230px;
+            padding-left:10px;
+            border:0;
+            background-color:#ffffff;
+            color: #bebebe;
+        }
+        .hide-center .loginUserName {
+            padding-left:30px;
+            padding-top:30px;
+        }
+        .hide-center .login1 #img-topleft-loginHead {
+            border-top-left-radius:5px;
+        }
+        .hide-center .login1 #input-topright-loginInput {
+            border-top-right-radius:5px;
+        }
+        .hide-center .login1 #img-bottomleft-loginHead {
+            border-bottom-left-radius:5px;
+        }
+        .hide-center .login1 #input-bottomright-loginInput {
+            border-bottom-right-radius:5px;
+        }
+        .hide-center .loginPassword {
+            padding-left:30px;
+        }
+        .hide-center .remember{
+            padding-left:30px;
+        }
+        .hide-center #formfoot {
+            margin-top:10px;
+            margin-left:30px;
+        }
+        .hide-center .LoginLink{
+            height:20px;
+            width:230px;
+            padding-top: 5px;
+            padding-left: 40px;
+            font-size: small;
+            text-align: right;
+            color: #55acef;
+        }
+        .hide-center #BSignIn {
+            border:0;
+            background: #55acef;
+            color:#ffffff;
+            width:240px;
+            height:40px;
+            border-bottom-left-radius:5px;
+            border-bottom-right-radius:5px;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
+        }

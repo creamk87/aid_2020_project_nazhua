@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=10.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>前端页面--->首页</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/loginform.css">
+    <script src="/static/js/jquery-1.11.3.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <style>
+        .parent {
+            width: 100%;
+            height: 200px;
+            padding: 20px 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: #ffe;
+            opacity: 0.9;
+            box-shadow: 0 0 10px #f00;
+            position: relative;
+        }
+
+        nav .row {
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .content img {
+            width: 100%;
+            height: 100%;
+            transform: scale(0.95);
+            transition: 0.3s;
+        }
+
+        .content:hover img {
+            transform: scale(1);
+        }
+
+        #form {
+            margin-left: 560px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-10" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">图标</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-10">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">排行</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">分类 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">类型一</a></li>
+                        <li><a href="#">类型二</a></li>
+                        <li><a href="#">类型三</a></li>
+                        <li><a href="#">类型四</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">其他</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form id="form" class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="login" href="/user/login">登录</a></li>
+                {#                <li>#}
+                {#                    <button id="login">登录</button>#}
+                {#                </li>#}
+                {#                <form action="" method="post">#}
+                {#                    <div class="overCurtain"></div>#}
+                {##}
+                {#                    <div class="hide-center">#}
+                {#                        <div id="formhead">#}
+                {#                            <div id="formhead-title">#}
+                {#                                登录#}
+                {#                            </div>#}
+                {#                            <button type="button" id="close">X</button>#}
+                {#                        </div>#}
+                {#                        <div id="formbody">#}
+                {#                            <div class="loginUserName">#}
+                {#                                <input id="input-topright-loginInput" name="userName" class="loginInput"#}
+                {#                                       placeholder="用户名" type="text" autocomplete="on">#}
+                {#                            </div>#}
+                {#                            <div class="loginPassword">#}
+                {#                                <input id="input-bottomright-loginInput" name="password" class="loginInput"#}
+                {#                                       placeholder="密码：8-12位字母+数字" type="password"#}
+                {#                                       style="border-bottom-right-radius:5px;" autocomplete="off">#}
+                {#                            </div>#}
+                {#                            <div class="LoginLink">#}
+                {#                                <a href="/user/retrieve_passwd">忘记密码</a>#}
+                {#                            </div>#}
+                {#                            <div class="remember">#}
+                {##}
+                {#                                <input type="checkbox">#}
+                {#                                <span> 记住我</span>#}
+                {#                            </div>#}
+                {#                            <div id="formfoot">#}
+                {#                                <button id="BSignIn" type="submit">确定登录</button>#}
+                {#                            </div>#}
+                {#                            <div class="LoginLink">#}
+                {#                                <a href="/user/register">立即注册</a>#}
+                {#                            </div>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </form>#}
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">历史记录 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">第一条</a></li>
+                        <li><a href="#">第二条</a></li>
+                        <li><a href="#">第三条</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">更多</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{#<script>#}
+{#    $("#login").click(function () {#}
+{#        $(".hide-center").fadeIn("slow");#}
+{#        $(".overCurtain").fadeIn("slow");#}
+{#    });#}
+{#    $("#close").click(function () {#}
+{#        $(".hide-center").fadeOut("slow");#}
+{#        $(".overCurtain").fadeOut("slow")#}
+{#    })#}
+{#</script>#}
+<div class="container-fluid">
+    <nav class="parent">
+        <div class="row">
+            <div class="col-lg-1 col-md-1">
+                <h4>种类</h4>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">全部</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">历史</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">冒险</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">竞技</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">恋爱</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">社会</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">生活</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">热血</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">科幻</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">悬疑</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">武侠</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1 col-md-1">
+                <h4>地区</h4>
+            </div>
+            <div class="col-lg-1 col-md-1">
+                <a href="#">全部</a>
+            </div>
+            <div class="col-lg-1 col-md-1">
+                <a href="#">韩国</a>
+            </div>
+            <div class="col-lg-1 col-md-1">
+                <a href="#">欧美</a>
+            </div>
+            <div class="col-lg-1 col-md-1">
+                <a href="#">大陆</a>
+            </div>
+            <div class="col-lg-1 col-md-1">
+                <a href="#">日本</a>
+            </div>
+            <div class="col-lg-1 col-md-1">
+                <a href="#">港台</a>
+            </div>
+            <div class="col-lg-1 col-md-1">
+                <a href="#">其他</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-lg-1">
+                <h4>进度</h4>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">全部</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">完结</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">连载</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">待发布</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-lg-1">
+                <h4>专题</h4>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">全部</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">内涵</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">小说改编</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">杂志</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">精品</a>
+            </div>
+            <div class="col-md-1 col-lg-1">
+                <a href="#">限免</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav>
+        <ul class="pagination">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href=""><img src="/static/img/news-img-1.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第一部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-2.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第二部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-3.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第三部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-3.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第四部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-2.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第五部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-1.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第六部漫画</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href=""><img src="/static/img/news-img-1.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第七部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-2.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第八部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-3.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第九部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-3.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第十部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-2.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第十一部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-1.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第十二部漫画</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href=""><img src="/static/img/news-img-1.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第十三部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-2.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第十四部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-3.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第十五部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-3.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第十六漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-2.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第十七漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-1.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第十八部漫画</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href=""><img src="/static/img/news-img-1.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第十九部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-2.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第二十部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-3.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第二十一部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-3.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第二十二部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-2.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第二十三部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-1.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第二十四部漫画</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href=""><img src="/static/img/news-img-1.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第二十五部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-2.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第二十六部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-3.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第二十七部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-3.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第二十八部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-2.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第二十九部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-1.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第三十部漫画</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href=""><img src="/static/img/news-img-1.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第三十一部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-2.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第三十二部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-3.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第三十三部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-3.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第三十四部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-2.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第三十五部漫画</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="thumbnail content">
+                    <a href="#"><img src="/static/img/news-img-1.jpg" alt="" class="responsive">
+                    </a>
+                    <p class="caption">
+                        <a href="#">第三十六部漫画</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
