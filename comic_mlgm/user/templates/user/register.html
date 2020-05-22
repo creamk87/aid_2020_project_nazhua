@@ -7,13 +7,93 @@
     <link rel="stylesheet" href="/static/css/register.css">
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery-1.11.3.js"></script>
+    <style>
+        .parent {
+            width: 100%;
+            height: 200px;
+            padding: 20px 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: #ffe;
+            opacity: 0.9;
+            box-shadow: 0 0 10px #f00;
+            position: relative;
+        }
+
+        nav .row {
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .content img {
+            width: 100%;
+            height: 100%;
+            transform: scale(0.95);
+            transition: 0.3s;
+        }
+
+        .content:hover img {
+            transform: scale(1);
+        }
+
+        #form {
+            margin-left: 560px;
+        }
+    </style>
+
 
 </head>
 <body>
+
+
+
+    <nav class="navbar navbar-default">
+
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-10" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">图标</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-10">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">排行</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">分类 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">类型一</a></li>
+                            <li><a href="#">类型二</a></li>
+                            <li><a href="#">类型三</a></li>
+                            <li><a href="#">类型四</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">其他</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form id="form" class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
 {#注册页面#}
 <div class="page">
 
         <div class="hide-center-2">
+            <div class="overCurtain"></div>
             <div id="formhead-2">
                 <div id="formhead-title-2">
                     <img src="" style="border: 1px solid black"> | <span>注册</span>
@@ -62,6 +142,7 @@
 
 {#    弹框登录页面#}
     <form action="" method="post">
+
         <div class="hide-center">
             <div id="formhead">
                 <div id="formhead-title">
@@ -71,20 +152,22 @@
             </div>
             <div id="formbody">
                 <div class="loginUserName">
-                    <input id="input-topright-loginInput" name="userName" class="loginInput" placeholder="用户名" type="text" autocomplete="on">
+                    <input id="input-topright-loginInput" name="userName" class="loginInput" placeholder=" 用户名" type="text" autocomplete="on">
                 </div>
                 <div class="loginPassword">
-                    <input id="input-bottomright-loginInput" name="password" class="loginInput" placeholder="密码：6-12位字母+数字" type="password" style="border-bottom-right-radius:5px;" autocomplete="off">
+                    <input id="input-bottomright-loginInput" name="password" class="loginInput" placeholder=" 密码：8-12位字母+数字" type="password" style="border-bottom-right-radius:5px;" autocomplete="off">
                 </div>
                 <div class="LoginLink">
                     <a href="/user/retrieve_passwd">忘记密码</a>
                 </div>
                 <div class="remember">
+
                     <input type="checkbox" >
                     <span> 记住我</span>
                 </div>
                 <div id="formfoot">
                     <button id="BSignIn" type="submit">确定登录</button>
+                    <button id="BSignIn_weibo" type="submit">微博登录</button>
                 </div>
                 <div class="LoginLink">
                     <a href="/user/register">立即注册</a>
@@ -100,11 +183,13 @@
         $("#BSignUp-3").click(function () {
             $(".hide-center").fadeIn("slow");
             $(".hide-center-2").fadeOut("slow");
+            $(".overCurtain").fadeIn("slow");
         });
  // 点击后登录弹框隐藏,回到注册页面
         $("#close").click(function () {
             $(".hide-center-2").fadeIn("slow");
             $(".hide-center").fadeOut("slow");
+            $(".overCurtain").fadeOut("slow")
         });
  // 复选框选中状态后触发启动注册按钮,取消选中禁用注册按钮
         $(function() {

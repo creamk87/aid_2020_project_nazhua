@@ -18,14 +18,15 @@
             width:400px;
             height:42px;
             margin:0;
-            padding-top:12px;
+            padding-top:0;
             padding-bottom:-30px;
             background-color: #55acef;
             border: 0.5px solid #55acef;
         }
         .hide-center-2 #formhead-title-2 {
             width:100px;
-            height:24px;
+            height:40px;
+            padding-top: 5px;
             margin-left:20px;
             margin-right:36px;
             color: #ffffff;
@@ -141,10 +142,9 @@
         }
 
          /*登录弹框样式*/
-
-        .hide-center {
+      .hide-center {
             width:500px;
-            height:600px;
+            height:500px;
             position:absolute;
             right:0;
             left:0;
@@ -155,61 +155,54 @@
             z-index:1;
         }
         .hide-center #formhead {
-            width:300px;
-            height:42px;
+            width:100%;
+            height:80px;
             margin:0;
-            padding-top:12px;
-            padding-bottom:-30px;
+            padding-top:20px;
+            padding-bottom:-10px;
             border-top-left-radius:10px;
             border-top-right-radius:10px;
-            background-color: red;
+            background-color: #55acef;
         }
         .hide-center #formhead-title {
-            width:100px;
+            width:50%;
             height:42px;
-            margin-left:120px;
-            margin-right:36px;
+            margin-left:0;
+            margin-top: 0;
             color: #ffffff;
             font-weight:900;
-            font-size: large;
+            font-size: x-large;
+            text-align: right;
             display:inline-block;
         }
         .hide-center #close {
-            width:35px;
-            height:24px;
-            margin-bottom: 0;
-            border:0;
+            width:10%;
+            height:42px;
+            margin-left:37%;
+            margin-top: 0;
             border-radius:20%;
-            background-color:red;
+            background-color:#55acef;
             color:white;
             display:inline-block;
         }
         .hide-center #formbody {
-            width:300px;
-            height:245px;
-            background-color:#efefef;
+            width:100%;
+            height:420px;
+            border: 1px solid #55acef;
+            background-color:#ffffff;
             border-bottom-left-radius:10px;
             border-bottom-right-radius:10px;
         }
-        .hide-center .loginHead {
-            margin-right:-8px;
-            padding:13px;
-            width:25px;
-            height:28px;
-            background-color: #efefef;
-            vertical-align:middle;
-        }
         .hide-center .loginInput {
-            height:45px;
-            width:230px;
-            padding-left:10px;
-            border:0;
-            background-color:#ffffff;
+            height:60px;
+            width:90%;
+            border:1px solid #969696;
+            background-color:white;
             color: #bebebe;
         }
         .hide-center .loginUserName {
-            padding-left:30px;
-            padding-top:30px;
+            padding-left:10%;
+            padding-top:10%;
         }
         .hide-center .login1 #img-topleft-loginHead {
             border-top-left-radius:5px;
@@ -224,21 +217,24 @@
             border-bottom-right-radius:5px;
         }
         .hide-center .loginPassword {
-            padding-left:30px;
+            padding-left:10%;
+            padding-top:5%;
         }
         .hide-center .remember{
-            padding-left:30px;
+            padding-left:10%;
+            padding-top: 4%;
         }
         .hide-center #formfoot {
-            margin-top:10px;
-            margin-left:30px;
+            margin-top:5%;
+            margin-left:10%;
+            width: 80%;
         }
         .hide-center .LoginLink{
             height:20px;
-            width:230px;
-            padding-top: 5px;
-            padding-left: 40px;
-            font-size: small;
+            width:80%;
+            margin-top:4%;
+            margin-left: 10%;
+            font-size: medium;
             text-align: right;
             color: #55acef;
         }
@@ -246,8 +242,21 @@
             border:0;
             background: #55acef;
             color:#ffffff;
-            width:240px;
-            height:40px;
+            width:40%;
+            height:50px;
+            margin-left: 5%;
+            border-bottom-left-radius:5px;
+            border-bottom-right-radius:5px;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
+        }
+        .hide-center #BSignIn_weibo {
+            border:0;
+            background: #55acef;
+            color:#ffffff;
+            width:40%;
+            height:50px;
+            margin-left: 10%;
             border-bottom-left-radius:5px;
             border-bottom-right-radius:5px;
             border-top-left-radius:5px;
