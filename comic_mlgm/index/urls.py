@@ -7,4 +7,6 @@ urlpatterns = [
     # http://127.0.0.1:8000/index
     path('', views.index),
     path('details', views.details),
+    path('picture', views.picture),
+    path('details/<int:x>', views.details_id),
 ]

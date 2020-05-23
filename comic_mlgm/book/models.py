@@ -11,7 +11,7 @@ class ComicBook(models.Model):
     update_time = models.DateField('更新时间', auto_now=True)
     set_up_time = models.DateField('创建时间', auto_now_add=True)
     classify = models.BinaryField('标签')
-    is_active = models.BooleanField('授权',default=0)
+    is_active = models.BooleanField('授权', default=0)
 
     class Mate:
         db_table = "comic_book"
@@ -19,10 +19,10 @@ class ComicBook(models.Model):
 
 
 class ComicPath(models.Model):
-    id = models.OneToOneField(ComicBook,on_delete=models.PROTECT,primary_key=True)
-    open_name = models.CharField('免费dir',max_length=100,default='open')
-    vip_name = models.CharField('会员dir',max_length=100,default='vip')
-    open_number = models.IntegerField('免费章节数',default=9999)
+    id = models.OneToOneField(ComicBook, on_delete=models.PROTECT, primary_key=True)
+    open_name = models.CharField('免费dir', max_length=100, default='open')
+    vip_name = models.CharField('会员dir', max_length=100, default='vip')
+    open_number = models.IntegerField('免费章节数', default=9999)
     # database_path = models.CharField('此书库名',max_length=20,default='comic_book')
     # table_path = models.CharField('此书表名',max_length=20,default='book_picturename')
     all_number = models.IntegerField('总章节数')
@@ -33,8 +33,8 @@ class ComicPath(models.Model):
 
 
 class PictureName(models.Model):
-    pictureID = models.BigIntegerField('图片ID',primary_key=True)
-    picture_name = models.CharField('图片名字',max_length=50)
+    pictureID = models.BigIntegerField('图片ID', primary_key=True)
+    picture_name = models.CharField('图片名字', max_length=50)
 
     class Mate:
         db_table = "picturename"
