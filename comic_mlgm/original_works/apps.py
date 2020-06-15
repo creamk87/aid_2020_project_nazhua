@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class OriginalWorksConfig(AppConfig):
-    name = 'original_works'
+# class OriginalWorksConfig(AppConfig):
+#     name = 'original_works'

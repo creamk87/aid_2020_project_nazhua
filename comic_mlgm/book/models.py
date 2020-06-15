@@ -10,12 +10,8 @@ class ComicBook(models.Model):
     all_number = models.IntegerField('总章节数')
     update_time = models.DateField('更新时间', auto_now=True)
     set_up_time = models.DateField('创建时间', auto_now_add=True)
-    classify = models.BinaryField('标签')
     is_active = models.BooleanField('授权', default=0)
-
-    class Mate:
-        db_table = "comic_book"
-        verbose_name_plural = verbose_name = '漫画'
+    classify = models.IntegerField('标签', default=1)
 
 
 class ComicPath(models.Model):
@@ -27,15 +23,7 @@ class ComicPath(models.Model):
     # table_path = models.CharField('此书表名',max_length=20,default='book_picturename')
     all_number = models.IntegerField('总章节数')
 
-    class Mate:
-        db_table = "comicpath"
-        verbose_name_plural = verbose_name = '图片路径表'
-
 
 class PictureName(models.Model):
     pictureID = models.BigIntegerField('图片ID', primary_key=True)
     picture_name = models.CharField('图片名字', max_length=50)
-
-    class Mate:
-        db_table = "picturename"
-        verbose_name_plural = verbose_name = '图片名字表'

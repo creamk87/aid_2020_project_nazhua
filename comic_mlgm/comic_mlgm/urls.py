@@ -20,7 +20,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', include('index.urls')),
     path('user/', include('user.urls')),
-    path('original_works/', include('original_works.urls')),
+    path('seckill/', include('seckills.urls')),
     path('book/', include('book.urls')),
-    path('cat/', include('cat.urls')),
+    # path('original_works/', include('original_works.urls')),
+    # path('cat/', include('cat.urls')),
 ]
+
+

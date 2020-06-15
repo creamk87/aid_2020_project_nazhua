@@ -8,5 +8,9 @@ urlpatterns = [
     path('', views.index),
     path('details', views.details),
     path('picture', views.picture),
-    path('details/<int:x>', views.details_id),
+    path('detail/<int:x>', views.details_id),
+    path('contents/<int:x>/<int:y>', views.contents),
+    path('content/<int:x>/<int:y>/<int:z>', views.content),
+    path('screen/<int:x>', views.screen),
+    path('search', views.search),
 ]

@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -23,10 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ew&#^rn3gg-4)nmuc+f(^l8pv=#w5gij37ikqv#%8)72q9ei4y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', '172.17.0.2', '106.52.138.27']
 
 # Application definition
 
@@ -37,11 +35,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'django_crontab',
     'index',
     'user',
     'original_works',
     'book',
     'cat',
+    'seckills',
 ]
 
 MIDDLEWARE = [
@@ -74,7 +74,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'comic_mlgm.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -82,13 +81,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'comic_mlgm',
-        'HOST': '10.211.55.5',
+        'HOST': '172.17.0.3',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': '6862439ck',
+        'PASSWORD': 'aid_2020',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -108,7 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -122,12 +119,81 @@ USE_L10N = True
 
 USE_TZ = False
 
-
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://172.17.0.2:6379/1",
+        # "TIMEOUT": None,  # 默认过期时间，不配置的话默认为300秒，None为不过期
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            # "PASSWORD": "mu7401889",
+        }
+    },
+    "search": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://172.17.0.2:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'), 
+    os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'book/static'),
-    )
+)
+STATIC_ROOT = '/home/project/comic_mlgm_static/static'
+
+TUPIAN_ROOT = '/home/project/2'
+
+TIME_SETTION = 15778080000000000  # 2020/1/1的时间戳
+
+ALIPAY_KEY_DIRS = os.path.join(BASE_DIR, 'static/key_file/')  # 配置阿里支付的钥匙路径
+# 应用ID
+ALIPAY_APP_ID = '2016102200735655'  # 支付宝沙箱里面去拿
+# 重定向地址
+ALIPAY_RETURN_URL = 'http://127.0.0.1:8000/seckill/result'
+# 支付结果回调地址
+ALIPAY_NOTIFY_URL = 'http://127.0.0.1:8000/seckill/result'
+
+# 发送邮件设置
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # 固定写法
+EMAIL_HOST = 'smtp.qq.com'  # 腾讯QQ邮箱 SMTP 服务器地址
+EMAIL_PORT = 465  # SMTP服务的端口号
+EMAIL_HOST_USER = '1916350942@qq.com'  # 发送邮件的QQ邮箱
+EMAIL_HOST_PASSWORD = 'oblffuvajojoeeba'  # 在QQ邮箱->设置->帐户->“POP3/IMAP......服务” 里得到的在第三方登录QQ邮箱授权码
+EMAIL_USE_TLS = False  # 与SMTP服务器通信时，是否启动TLS链接(安全链接)默认false
+EMAIL_USE_SSL = True
+
+JWT_TOKEN_KEY = '1234567'
+
+# 漫画标签数量
+COMIC_LABEL_COUNT = 16
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+)
+CORS_ALLOW_HEADERS = (
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+)
+
+SSH_HOST = "49.233.38.13"
+SSH_USERNAME = 'ubuntu'
+SSH_PASSWORD = 'mu7401889.'

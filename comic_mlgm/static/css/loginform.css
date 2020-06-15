@@ -1,4 +1,34 @@
+        .parent {
+            width: 100%;
+            height: 200px;
+            padding: 20px 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: #ffe;
+            opacity: 0.9;
+            box-shadow: 0 0 10px #f00;
+            position: relative;
+        }
 
+        nav .row {
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .content img {
+            width: 100%;
+            height: 100%;
+            transform: scale(0.95);
+            transition: 0.3s;
+        }
+
+        .content:hover img {
+            transform: scale(1);
+        }
+
+        #form {
+            margin-left: 560px;
+        }
         .hide-center {
             width:500px;
             height:500px;
@@ -8,7 +38,7 @@
             bottom:0;
             top:0;
             margin:auto;
-            display:none;
+            /*display:none;*/
             z-index:1;
         }
         .hide-center #formhead {
@@ -22,24 +52,14 @@
             background-color: #55acef;
         }
         .hide-center #formhead-title {
-            width:50%;
+            width:100%;
             height:42px;
             margin-left:0;
             margin-top: 0;
             color: #ffffff;
             font-weight:900;
             font-size: x-large;
-            text-align: right;
-            display:inline-block;
-        }
-        .hide-center #close {
-            width:10%;
-            height:42px;
-            margin-left:37%;
-            margin-top: 0;
-            border-radius:20%;
-            background-color:#55acef;
-            color:white;
+            text-align: center;
             display:inline-block;
         }
         .hide-center #formbody {
@@ -55,7 +75,7 @@
             width:90%;
             border:1px solid #969696;
             background-color:white;
-            color: #bebebe;
+            color: black;
         }
         .hide-center .loginUserName {
             padding-left:10%;
