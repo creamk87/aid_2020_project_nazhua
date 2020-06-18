@@ -163,8 +163,8 @@ ALIPAY_NOTIFY_URL = 'http://127.0.0.1:8000/seckill/result'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # 固定写法
 EMAIL_HOST = 'smtp.qq.com'  # 腾讯QQ邮箱 SMTP 服务器地址
 EMAIL_PORT = 465  # SMTP服务的端口号
-EMAIL_HOST_USER = '1916350942@qq.com'  # 发送邮件的QQ邮箱
-EMAIL_HOST_PASSWORD = 'oblffuvajojoeeba'  # 在QQ邮箱->设置->帐户->“POP3/IMAP......服务” 里得到的在第三方登录QQ邮箱授权码
+EMAIL_HOST_USER = 'xxxxx@qq.com'  # 发送邮件的QQ邮箱
+EMAIL_HOST_PASSWORD = 'xxxxxx'  # 在QQ邮箱->设置->帐户->“POP3/IMAP......服务” 里得到的在第三方登录QQ邮箱授权码
 EMAIL_USE_TLS = False  # 与SMTP服务器通信时，是否启动TLS链接(安全链接)默认false
 EMAIL_USE_SSL = True
 
@@ -194,6 +194,6 @@ CORS_ALLOW_HEADERS = (
     'x-requested-with',
 )
 
-SSH_HOST = "49.233.38.13"
-SSH_USERNAME = 'ubuntu'
-SSH_PASSWORD = 'mu7401889.'
+SSH_HOST = "xxxxxx"
+SSH_USERNAME = 'xxxxx'
+SSH_PASSWORD = 'xxxxx'
